@@ -1,4 +1,4 @@
-Equipe equipe = new Equipe("Ducati", "Alemanha", 1947);
+﻿Equipe equipe = new Equipe("Ducati", "Alemanha", 1947);
 Equipe equipe2 = new Equipe("Yamaha", "Japão", 1953);
 Equipe equipe3 = new Equipe("Honda", "Japão", 1948);
 
