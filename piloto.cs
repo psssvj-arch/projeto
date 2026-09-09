@@ -10,7 +10,7 @@ class Piloto
         this.idade = idade;
         this.equipe = equipe;
     }
-    
+
     public string Nome
     {
         get { return nome; }
@@ -28,6 +28,21 @@ class Piloto
         get { return equipe; }
         set { equipe = value; }
     }
+
+    public void Apresentar()
+    {
+        Console.WriteLine($"Olá! Eu sou {nome} e piloto pela equipe {equipe}.");
+    }
+    public bool EhMaiorDeIdade()
+    {
+        return idade >= 18;
+    }
+
+    public void TrocarEquipe(string novaEquipe)
+    {
+        equipe = novaEquipe;
+    }
+
     public override string ToString()
     {
         return $"Nome: {nome}, Idade: {idade}, Equipe: {equipe}";

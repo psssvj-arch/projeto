@@ -29,6 +29,21 @@ class Moto
         set { ano = value; }
     }
 
+    public void MostrarInformacoes()
+    {
+        Console.WriteLine($"A moto é uma {marca} {modelo}, ano {ano}.");
+    }
+
+    public bool EhAntiga()
+    {
+        return ano < 2010;
+    }
+
+    public void AlterarAno(int novoAno)
+    {
+        ano = novoAno;
+    }
+
     public override string ToString()
     {
         return $"Modelo: {modelo}, Marca: {marca}, Ano: {ano}";

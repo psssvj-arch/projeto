@@ -1,36 +1,87 @@
-﻿Equipe equipe = new Equipe("Ducati", "Alemanha", 1947);
-Equipe equipe2 = new Equipe("Yamaha", "Japão", 1953);
+﻿
+Equipe equipe = new Equipe("Ducati", "Alemanha", 1947);
+Equipe equipe2 = new Equipe("Yamaha", "Japão", 1955);
 Equipe equipe3 = new Equipe("Honda", "Japão", 1948);
+equipe.MostrarInformacoes();
+equipe2.MostrarInformacoes();
+equipe3.MostrarInformacoes();
 
-Moto moto1 = new Moto("Ducati Panigale V4", "Ducati", 2021);
-Moto moto2 = new Moto("Yamaha YZF-R1", "Yamaha", 2021);
-Moto moto3 = new Moto("Honda CBR1000RR", "Honda", 2021);
+if (equipe.EhAntiga())
+{
+    Console.WriteLine("Essa é uma equipe antiga.");
+}
+else
+{
+    Console.WriteLine("Essa é uma equipe nova.");
+}
 
-Piloto piloto1 = new Piloto("Matheus", 42, "Yamaha");
-Piloto piloto2 = new Piloto("Carlos", 38, "Ducati");
-Piloto piloto3 = new Piloto("Pedro", 07, "Honda");
+equipe.AlterarPais("Brasil");
 
-piloto1.Idade = 26;
-piloto2.Equipe = "Honda";
+Console.WriteLine(equipe);
 
-equipe1.Pais = "Japão";
-equipe2.Nome = "Honda Moto Racing";
 
-moto1.Ano = 2025;
-moto2.Modelo = "RC213V 2026";
 
-Console.WriteLine("===== PILOTOS =====");
-Console.WriteLine(piloto1);
-Console.WriteLine(piloto2);
 
-Console.WriteLine();
+Moto moto1 = new Moto("CB 500", "Honda", 2020);
+Moto moto2 = new Moto("R1", "Yamaha", 2020);
+Moto moto3 = new Moto("Panigale", "Ducati", 2020);
 
-Console.WriteLine("===== EQUIPES =====");
-Console.WriteLine(equipe1);
-Console.WriteLine(equipe2);
+moto1.MostrarInformacoes();
+moto2.MostrarInformacoes();
+moto3.MostrarInformacoes();
 
-Console.WriteLine();
+if (moto1.EhAntiga())
+{
+    Console.WriteLine("Essa moto é antiga.");
+}
+else
+{
+    Console.WriteLine("Essa moto é nova.");
+}
 
-Console.WriteLine("===== MOTOS =====");
+moto1.AlterarAno(2025);
+
+moto2.MostrarInformacoes();
+
+if (moto2.EhAntiga())
+{
+    Console.WriteLine("Essa moto é antiga.");
+}
+else    
+{
+    Console.WriteLine("Essa moto é nova.");
+}
+
+moto2.AlterarAno(2025);
+
+moto3.MostrarInformacoes();
+
+if (moto3.EhAntiga())
+{
+    Console.WriteLine("Essa moto é antiga.");
+}
+else
+{
+    Console.WriteLine("Essa moto é nova.");
+}
+
+moto3.AlterarAno(2025);
+
 Console.WriteLine(moto1);
 Console.WriteLine(moto2);
+Console.WriteLine(moto3);
+
+
+
+Piloto piloto = new Piloto("João", 41, "Yamaha");
+
+piloto.Apresentar();
+
+if (piloto.EhMaiorDeIdade())
+{
+    Console.WriteLine("É maior de idade.");
+}
+
+piloto.TrocarEquipe("Mercedes");
+
+Console.WriteLine(piloto);

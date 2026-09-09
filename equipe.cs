@@ -29,6 +29,24 @@ class Equipe
         set { anoFundacao = value; }
     }
 
+    // Método 1
+    public void MostrarInformacoes()
+    {
+        Console.WriteLine($"A equipe {nome} é do país {pais} e foi fundada em {anoFundacao}.");
+    }
+
+    // Método 2
+    public bool EhAntiga()
+    {
+        return anoFundacao < 2000;
+    }
+
+    // Método 3
+    public void AlterarPais(string novoPais)
+    {
+        pais = novoPais;
+    }
+
     public override string ToString()
     {
         return $"Nome: {nome}, País: {pais}, Ano de Fundação: {anoFundacao}";
